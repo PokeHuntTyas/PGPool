@@ -125,7 +125,7 @@ class Account(flaskDb.Model):
 
                 # Limitations and order
                 if reuse:
-                    query = query.limit(count).order_by(Account.lad_modified.desc())
+                    query = query.limit(count).order_by(Account.last_modified.desc())
                 else:
                     query = query.limit(count).order_by(Account.last_modified)
 
